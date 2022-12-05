@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SACAR LA HORA ACTUAL EN EL CUERPO</title>
+  <script type="text/javascript">
+
+            var hora= new Date();                            //INSTANCIA DEL OBJETO DATE.
+            var horaActu= hora.toLocaleTimeString();          //MÉTODO QUE SACA LA HORA ACTUAL.
+            var dias= ["Domingo","Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];  //ARRAY.
+            var dia= hora.getDay();                   //MÉTODO QUE OBTIENE EL DÍA DE LA SEMANA DESDE EL 0 HASTA EL 6. DOMINGO 0, SABADO 6.
+            var hoy= dias[dia];                    //LLAMAMOS AL ARRAY Y QUE LO JUNTE CON EL DÍA QUE ES HOY.
+            document.write("LA PÁGINA WEB SE A CARGADO A LAS " +horaActu+ " <br><br>" + "HOY ES: " +hoy);
+                                                            //SACA LA HORA ACTUAL Y EL DÍA DE LA SEMANA.
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

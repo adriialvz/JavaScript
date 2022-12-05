@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LOTERIAS Y APUESTAS</title>
+  <link rel="stylesheet" href="CSS/LOTERIAS.css">
+  <script type="text/javascript">
+
+      var ale1= Math.floor(Math.random()*10);    //COGE UN NÚMERO ALEATORIO ENTRE 0 Y 9
+      var ale2= Math.floor(Math.random()*10);
+      var ale3= Math.floor(Math.random()*10);
+      var ale4= Math.floor(Math.random()*10);
+      var ale5= Math.floor(Math.random()*10);
+
+      var num= new Array(ale1, ale2, ale3, ale4, ale5);  //COGE EL NÚMERO Y LO JUNTA EN POSICIONES DEL 0 AL 4.
+      var numCompleto= num.join("");            //COGE EL NÚMERO Y LE QUITA LAS COMAS.
+
+
+      var ale6= Math.floor(Math.random()*10);
+      var ale7= Math.floor(Math.random()*10);
+      var ale8= Math.floor(Math.random()*10);
+      var ale9= Math.floor(Math.random()*10);
+      var ale10= Math.floor(Math.random()*10);
+
+      var num1= new Array(ale6, ale7, ale8, ale9, ale10);
+      var numCompleto1= num1.join("");
+
+      //AL PINCHA EN EL BOTON QUE VIENE A ESTA FUNCION SALE EL NUMERO ALEATORIO Y EL PREMIADO A LA VEZ EN DISTINTOS CUADROS
+      function gene(){
+        document.getElementById('ale').style.textAlign="center";
+        document.getElementById('ale').style.backgroundColor="black";
+        document.getElementById('ale').style.color="GREEN";
+        document.getElementById('ale').style.fontWeight="bold";
+        document.getElementById('ale').style.fontSize="100%";
+        document.getElementById('ale').value="SU BOLETO ALEATORIO ES......" +numCompleto;
+
+
+        document.getElementById('pre').style.textAlign="center";
+        document.getElementById('pre').style.backgroundColor="black";
+        document.getElementById('pre').style.color="RED";
+        document.getElementById('pre').style.fontWeight="bold";
+        document.getElementById('pre').style.fontSize="100%";
+        document.getElementById('pre').value= "EL NÚMERO PREMIADO ES......" +numCompleto1;
+      }
+
+      function compru(){
+
+          var prem= new String(numCompleto);    //DESCONPONEMOS CADA NÚMERO PARA HACER EL CONDICIONAL.
+          var a= prem.charAt(0);
+          var b= prem.charAt(1);
+          var c= prem.charAt(2);
+          var d= prem.charAt(3);
+          var e= prem.charAt(4);
+
+          var prem1= new String(numCompleto1);
+          var aa= prem1.charAt(0);
+          var bb= prem1.charAt(1);
+          var cc= prem1.charAt(2);
+          var dd= prem1.charAt(3);
+          var ee= prem1.charAt(4);
+
+        if(numCompleto == numCompleto1){
+          alert("ENHORABUENA HAS GANADO LA LOTERIA. HAS GANADO 50.000€");
+        } else if(b == bb && c == cc && d == dd && e == ee){
+          alert("HAS GANADO 5000€ POR TENER LAS CUATRO ÚLTIMAS CIFRAS.");
+        } else if(c == cc && d == dd && e == ee){
+          alert("HAS GANADO 500€ POR TENER LAS TRES ÚLTIMAS CIFRAS.");
+        } else if(d == dd && e == ee){
+          alert("HAS GANADO 50€ POR TENER LAS DOS ÚLTIMAS CIFRAS.");
+        } else if(e == ee){
+          alert("HAS GANADO 5€ POR TENER LA ÚLTIMA CIFRA.");
+        } else if(a == aa){
+          alert("HAS GANADO 5€ POR TENER LA PRIMERA CIFRA.");
+        } else if(e == ee && a == aa){
+          alert("HAS GANADO 10€ POR LA PRIMERA Y LA ÚLTIMA CIFRA.");
+        } else if(a == ee){
+          alert("HAS GANADO 1€ POR LA PRIMERA CIFRA Y LA ÚLTIMA CIFRA.");
+        } else if(e == aa){
+          alert("HAS GANADO 1€ POR LA ÚLTIMA CIFRA Y LA PRIMERA CIFRA.");
+        } else if(a == aa && b == bb){
+          alert("HAS GANADO 50€ POR TENER LAS DOS PRIMERAS CIFRAS.");
+        } else if(a == aa && b == bb && c == cc){
+          alert("HAS GANADO 500€ POR TENER LAS TRES PRIMERAS CIFRAS.");
+        } else if(a == aa && b == bb && c == cc && d == dd){
+          alert("HAS GANADO 5000€ POR TENER LAS CUATRO PRIMERAS CIFRAS.");
+        } else {
+          alert("LO SIENTO SIGA INTENTANDOLO...");
+        }
+      }
+
+
+
+  </script>
+</head>
+<body>
+
+  <button type="button" name="button" class="genera" onclick="gene()">GENERA ALEATORIO Y PREMIADO</button>
+  <button type="button" name="button" class="comprueba" onclick="compru()">COMPRUEBA SU PREMIO</button>
+  <button type="button" name="button" class="volver" onclick="location.reload()">VOLVER A APOSTAR</button>
+  <input type="text" name="" value="" class="aleato" id="ale">
+  <input type="text" name="" value="" class="premi" id="pre">
+
+</body>
+</html>

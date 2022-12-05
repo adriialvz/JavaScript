@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CREACIÓN DE OBJETOS CON SUS PROPIEDADES Y MÉTODOS</title>
+  <script type="text/javascript">
+
+    function alumno (){              //SIN PARAMETROS.
+      var nam;
+      var num1;                      //DEFINICIÓN DE VARIABLES DENTRO DEL OBJETO.
+      var num;
+
+      this.Matricula= function () {
+        num= prompt("INTRODUCE EL NÚMERO DE MATRICULA DE " +nam);
+        num= parseInt(num);
+      }
+      this.Edad1= function () {
+        num1= prompt("INTRODUCE TU EDAD: ");
+        num1= parseInt(num1);
+      }
+      this.Name= function (){
+        nam= prompt("INTRODUCE TU NOMBRE: ");
+      }
+      this.Imprimir= function () {
+        document.write("<strong>Nombre: </strong>" +nam+
+                      "<br><br><strong>Edad: </strong>" +num1+
+                      "<br><br><strong>Número Matricula: </strong>" +num);
+      }
+    }
+
+    var alumno1= new alumno();        //SIN PARAMETROS.
+
+    alumno1.Name();
+    alumno1.Edad1();                    //LLAMAMOS A LOS MÉTODOS.
+    alumno1.Matricula();
+    alumno1.Imprimir();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="CSS/SUMAS.css">
+  <title>REALIZACIÓN DE SUMAS</title>
+  <script type="text/javascript">
+
+                  var num1;
+                  var num2;
+                 function num1() {
+                           num1= prompt("INTRODUCE EL PRIMER NÚMERO");
+                           num1= parseInt(num1);
+                 }
+                 function num2() {
+                            num2= prompt("INTRODUCE EL SEGUNDO NÚMERO");
+                            num2= parseInt(num2);
+                 }
+                 function num3() {
+                           var result= num1 + num2;
+                           alert("El resultado de sumar " +num1+ " + " +num2+ " es: " +result);
+
+                 }
+
+  </script>
+</head>
+<body>
+
+  <img src="IMAGENES/SIGNO SUMAR.png" alt="" class="suma">
+  <img src="IMAGENES/SIGNO SUMAR.png" alt="" class="suma1">
+
+  <button onclick="num1()" class="uno" type="button" name="button">INTRODUZCA PRIMER NÚMERO</button>
+  <button onclick="num2()" class="dos" type="button" name="button">INTRODUZCA SEGUNDO NÚMERO</button>
+  <button onclick="num3()" class="tres" type="button" name="button">RESULTADO</button>
+
+</body>
+</html>

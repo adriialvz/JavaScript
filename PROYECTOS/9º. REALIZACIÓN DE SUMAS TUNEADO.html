@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="CSS/SUMAS 2.css">
+  <title>SUMAS TUNERADO</title>
+  <script type="text/javascript">
+
+        window.onload= function() {
+            alert("BIENVENIDO A LA PÁGINA QUE REALIZA SUMAS");
+          }
+
+        function result(){
+          var sum1= document.getElementById('suma1').value;      //COGEMOS EL VALOR QUE LE METIMOS A LA CAJA DE TEXTO Y LO GUARDAMOS.
+          sum1= parseInt(sum1);                                  //PASAMO EL VALOR A UN NÚMERO ENTERO.
+          var sum2= document.getElementById('suma2').value;
+          sum2= parseInt(sum2);
+
+          var resultado= sum1 + sum2;
+          document.getElementById('resu').innerHTML= resultado;     //PEGAMOS EL RESULTADO EN UN DIV.
+          document.getElementById('resu').style.fontWeight= "bold";
+          document.getElementById('resu').style.color= "pink";
+          document.getElementById('resu').style.fontSize= "850%";
+        }
+
+
+  </script>
+</head>
+<body>
+
+  <div class="igual"> =
+
+  </div>
+  <div class="suma"> +
+
+  </div>
+  <p class="pri">INGRESA EL PRIMER NÚMERO</p>
+  <p class="seg">INGRESA EL SEGUNDO NÚMERO</p>
+
+  <input type="text" name="" value="" class="uno" id="suma1">
+  <input type="text" name="" value="" class="dos" id="suma2">
+  <div class="result" onclick="result()" id="resu"><br><br><br>PINCHA AQUÍ PARA OBTENER EL RESULTADO
+
+  </div>
+
+
+
+</body>
+</html>

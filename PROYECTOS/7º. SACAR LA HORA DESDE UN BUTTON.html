@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SACAR LA HORA DESDE UN BUTTON</title>
+  <link rel="stylesheet" href="CSS/HORA.css">
+  <script type="text/javascript">
+
+            function hora (){
+              var hora= new Date();
+              var hora1= hora.getHours();
+              var mins= hora.getMinutes();
+              alert("Son las " +hora1+ " horas y " +mins+ " minutos");
+            }
+
+  </script>
+</head>
+<body>
+
+  <button type="button" name="button" onclick="hora()">PULSA AQUÍ PARA SABER AL HORA</button>
+
+</body>
+</html>

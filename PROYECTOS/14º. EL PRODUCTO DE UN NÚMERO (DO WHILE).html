@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PRODUCTO</title>
+  <script type="text/javascript">
+
+    var producto= 1;              //LO INICIAMOS A 1 POR QUE POR AL MULTIPLICARLO SI NO POR 0 DARÍA MAL.
+    var i=1;                      //EMPIEZA EN 1 PORQUE ES EL PRIMER NÚMERO IMPAR.
+    document.write("EL PRODUCTO DE LOS 10 PRIMEROS NÚMEROS IMPARES ES: ");
+    do {
+      producto= producto * i;          //ESTO HACE QUE EN CADA PASADA DEL BUCLE VALLA MULTIPLICANDO EL PRODUCTO.
+      document.write(" <br>" +i+ " " +producto);
+      i+=2;                            //VA DE DOS EN DOS DESDE EL 1 Y COGE TODOS LOS IMPARES.
+    } while(i <= 19);                  //ACABA EN 19 PORQUE ES EL ULTIMO NÚMERO QUE COGERA.
+
+  </script>
+</head>
+<body bgcolor="grey">
+
+</body>
+</html>

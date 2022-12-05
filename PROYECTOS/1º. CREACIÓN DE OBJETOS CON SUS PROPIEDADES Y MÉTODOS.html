@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CREACIÓN DE OBJETOS CON SUS PROPIEDADES Y MÉTODOS</title>
+  <link rel="stylesheet" href="CSS/ESTILO.css">
+  <script type="text/javascript">
+
+        function alumno(nombre, edad) {      //CREACIÓN DEL OBJETO CON PARAMETROS.
+            this.Nombre= nombre;
+            this.Edad= edad;                  //DEFINICIÓN DE LAS PROPIEDADES.
+            this.NumMatri;                    //EL THIS SE PONE PARA QUE EN CASO DE QUE LOS PARAMETROS COINCIDAN CON EL NOMBRE DE LA PROPIEDAD NO HAYA CONFUSIÓN.
+
+            this.Matricula= function () {                                //DEFINICIÓN DEL MÉTODOS.
+              var matri= prompt ("INTRODUCE EL NÚMERO DE MATRICULA");    //INTRODUCIR EL NUMERO DE LA MATRICULA.
+              this.NumMatri= parseInt(matri);                            //A LA PROPIEDAD NUM.MATRI LE ASIGNAMOS EL NUMERO GUARDADO EN LA VARIABLE MATRI.
+            }
+            this.Imprimir= function (){                                  //DEFINICIÓN DEL MÉTODO.
+              alert("Nombre: " +this.Nombre+                             //SACAMOS UNA ALERTA POR PANTALLA IMPRIMIENDO EL NOMBRE, EDAD Y NUM MATRICULA.
+                    "\nEdad: " +this.Edad+
+                    "\nNumero Matricula: " +this.NumMatri);
+            }
+        }
+
+        var alumno1= new alumno("Juan Fernandez", "15 años");              //CREACIÓN DE INSTANCIA DEL ALUMNO1.
+        var alumno2= new alumno("Mari Puri", "17 años");                  //CREACIÓN DE INSTANCIA DEL ALUMNO2.
+
+        alumno1.Matricula();                                               //LLAMAMOS AL ALUMNO1 PARA QUE INTRODUZCA LA MATRICULA.
+        alumno2.Matricula();                                               //LLAMAMOS AL ALUMNO2 PARA QUE INTRODUZCA LA MATRICULA.
+
+        alumno1.Imprimir();                                                //IMPRIMIMOS POR PANTALLA LO DEL ALUMNO1.
+        alumno2.Imprimir();                                                //IMPRIMIMOS POR PANTALLA LO DEL ALUMNO2.
+
+
+
+  </script>
+</head>
+<body>
+
+  <h1>CREACIÓN DE OBJETOS CON PROPIEDADES Y MÉTODOS</h1>
+
+</body>
+</html>
